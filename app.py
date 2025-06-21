@@ -12,13 +12,15 @@ import json
 from ensemble_boxes import weighted_boxes_fusion
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'
 
 db_config = {
-    'host': os.getenv('DB_HOST', 'localhost'),
-    'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', 'Object@1234'),
-    'database': os.getenv('DB_NAME', 'object_detection')
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'Object@1234',
+    'database': 'object_detection'
 }
+
 try:
     yolo_model = YoloDetector(model_variant="yolov8x")
     print("YOLOv8 model initialized successfully")
