@@ -17,7 +17,7 @@ app.secret_key = 'your_secret_key'
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'Object@1234',
+    'password': 'Object@123',
     'database': 'object_detection'
 }
 
